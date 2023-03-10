@@ -1,0 +1,33 @@
+form {
+    background-color: bisque;
+    bottom: 1rem;
+    bottom: 35.6rem;
+    position: relative;
+    height: 101vh;
+}
+.home{
+    background-color: blueviolet;
+    height: 100vh;
+    width: 100%;
+}
+.home2 {
+        background-color: blue;
+        width: 80%;
+        height: 80vh;
+        border-radius: 65px;
+        position: absolute;
+        left: 10rem;
+        top: 5rem;
+    }
+
+.form-group{
+    position: relative;
+    top: 3rem;
+    width: 80%;
+    left: 3rem;
+}
+.btn{
+position: relative;
+    left: 40rem;
+    top: 7rem;
+}

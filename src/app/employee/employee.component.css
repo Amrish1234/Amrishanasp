@@ -1,0 +1,68 @@
+.main {
+    background-color: aqua;
+    width: 100%;
+    height: 100vh;
+}
+
+.first {
+    background-color: rgb(252, 250, 248);
+    width: 80%;
+    height: 60vh;
+}
+
+.first1 {
+    background-color: rgb(67, 42, 143);
+    width: 80%;
+    height: 60vh;
+    color: white;
+}
+
+.first2 {
+    background-color: rgb(233, 236, 232);
+    width: 80%;
+    height: 60vh;
+}
+h1{
+    position: relative;
+    left: 35rem;
+}
+button{
+  
+            width: 7rem;
+            border-radius: 10px;
+            color: white;
+            border: azure;
+            height: 7vh;
+            position: relative;
+            left: 9px;
+        
+}
+p{
+    float: right;
+}
+.month{
+  position: relative;
+  right: 42rem;
+}
+/* .toggle{
+    position: relative;
+    left: 50rem;
+    bottom: 2rem;
+
+} */
+.name{
+    color: white;
+}
+.left{
+
+            width: 80%;
+            height: 60vh;
+            position: relative;
+            left: 3rem;
+            border-radius: 12px;
+
+        
+}
+p{
+    text-align: center;
+}
