@@ -1,0 +1,57 @@
+package com.user.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.user.entity.DynamicButtonEntity;
+import com.user.entity.UserEntity;
+import com.user.service.DynamicButtonService;
+
+@RestController
+@CrossOrigin("*")
+@RequestMapping("div")
+
+public class DynamicButtonController {
+	
+	@Autowired
+	private DynamicButtonService dynamicButtonService;
+	
+	
+	@PostMapping("/saveDiv")
+	public DynamicButtonEntity add(@RequestBody DynamicButtonEntity dynamicButtonEntity){
+		DynamicButtonEntity add=this.dynamicButtonService.addData(dynamicButtonEntity);
+		return add;
+	}
+	
+	@GetMapping("/getDiv")
+	public ResponseEntity<List<DynamicButtonEntity>> get(){
+		List<DynamicButtonEntity> get = this.dynamicButtonService.get();
+		return ResponseEntity.of(Optional.of(get));
+	}
+	
+	@PutMapping("/update/{Id}")
+	public DynamicButtonEntity updateSingle(@PathVariable Integer Id,@RequestBody DynamicButtonEntity dynamicButtonEntity){
+		DynamicButtonEntity updateSingle = this.dynamicButtonService.updateSingle(Id,dynamicButtonEntity);
+		return updateSingle;
+	}
+	
+	@GetMapping("/getStatus")
+	public List<DynamicButtonEntity> getStatus()
+	{
+		return this.dynamicButtonService.getStatus();
+	}
+
+}
